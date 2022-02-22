@@ -1,0 +1,11 @@
+---
+- name: Implementing when conditions
+  hosts: all
+  vars:
+   - a: 20
+  tasks:
+   - name: Download from git
+     git:
+      repo: https://github.com/intelliqittrainings/maven.git
+      dest: /tmp/git
+     when: a == 10

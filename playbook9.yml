@@ -1,0 +1,11 @@
+---
+- name: User create uisng hsot scope varibales
+  hosts: 172.31.95.178
+  tasks:
+   - name: USer creation
+     user:
+      name: "{{a}}"
+      password: "{{b}}"
+      home: "{{c}}"
+      shell: "{{d}}"
+...

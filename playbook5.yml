@@ -1,0 +1,10 @@
+---
+- name: Install s/w packages using variables
+  hosts: all
+  tasks:
+   - name: Install/Uninstall
+     apt:
+      name: "{{a}}"
+      state: "{{b}}"
+      update_cache: "{{c}}"
+...
